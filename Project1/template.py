@@ -11,6 +11,7 @@ MORSE_CODE = {'.-': 'a', '-...': 'b', '-.-.': 'c', '-..': 'd', '.': 'e', '..-.':
               '..---': '2', '...--': '3', '....-': '4', '.....': '5', '-....': '6', '--...': '7',
               '---..': '8', '----.': '9', '-----': '0'}
 
+#Sanket Behera
 "...  .-  -.  -.-  .  -     -...  .  ....  .  .-.  .-"
 
 #geeksforgeeks
@@ -48,7 +49,6 @@ class MorseDecoder():
         list_GPIOinput = []
         for i in range(100):
             list_GPIOinput.append(GPIO.input(PIN_BTN))
-        #print(most_frequent(list_GPIOinput), "signal")
         return most_frequent(list_GPIOinput)
 
 
@@ -60,18 +60,13 @@ class MorseDecoder():
         period = 0
         x = True
         if(self.getsignalStatus()==1):
-           # print("h")
             while x:
                 if(self.getsignalStatus() == 0):
                     period = time.time()-s
-                    #print(period)
                     if (period <= 1.5*self.T):
-                       # print(GPIO.input(PIN_BTN))
-                        #print(".")
                         GPIO.output(PIN_BLUE_LED, GPIO.HIGH)
                         return "."
                     else:
-                        #print("-")
                         GPIO.output(PIN_RED_LED_0, GPIO.HIGH)
                         GPIO.output(PIN_RED_LED_0, GPIO.HIGH)
                         GPIO.output(PIN_RED_LED_0, GPIO.HIGH)
@@ -82,15 +77,12 @@ class MorseDecoder():
             while x:
                 if (self.getsignalStatus() == 1):
                     period = (time.time()) - s
-                    #print(period)
                     if (period < 1.5 * self.T):
                         return
                     elif (1.5*self.T < period <= 6.8 * self.T):
                              print("in")
                              return "endSymbol"
-
                     elif(period >= 7*self.T):
-                        #print("ord endt")
                         return "endWord"
 
 
@@ -110,7 +102,6 @@ class MorseDecoder():
             self.update_current_symbol("-")
         else:
             if(signal == "endSymbol"):
-                print("hhhhh")
                 return self.handle_symbol_end()
             elif(signal == "endWord"):
                 return self.handle_word_end()
