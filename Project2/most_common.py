@@ -1,28 +1,31 @@
-from Player import Player
-from Action import Action
+'''Module'''
 import random
+from player import Player
+from Action import Action
 
 
 # geeksforgeeks
-def most_frequent(List):
+def most_frequent(a):
+    '''finds the most frquent element in a list'''
     counter = 0
-    num = List[0]
+    num = a[0]
 
-    for i in List:
-        curr_frequency = List.count(i)
-        if (curr_frequency > counter):
+    for i in a:
+        curr_frequency = a.count(i)
+        if curr_frequency > counter:
             counter = curr_frequency
             num = i
 
     return num
 
 class MostCommon(Player):
+    '''MostCommon class'''
 
     opponent_choices=[]
 
     def select_action(self):
         counter_attack = self.get_opponents_most_common_actions()
-        if(isinstance(counter_attack, Action)):
+        if isinstance(counter_attack, Action):
             return Action(counter_attack.who_beats_me())
         return Action(counter_attack)
 
@@ -36,7 +39,7 @@ class MostCommon(Player):
 
 
     def get_opponents_most_common_actions(self):
-        if(len(self.opponent_choices)==0):
-            return random.randint(0,2)
-        else:
-            return most_frequent(self.opponent_choices)
+        '''uses the most_frequent method to return opponents most common action'''
+        if len(self.opponent_choices)==0:
+            return random.randint(0, 2)
+        return most_frequent(self.opponent_choices)

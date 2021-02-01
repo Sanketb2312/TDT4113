@@ -1,4 +1,4 @@
-from Player import Player
+from player import Player
 from Action import Action
 class Sequential(Player):
     counter = -1
@@ -10,7 +10,7 @@ class Sequential(Player):
         else:
             return Action(self.counter)
 
-    def receive_result(self, action):
+    def receive_result(self):
         pass
 
     def enter_name(self):
