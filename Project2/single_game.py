@@ -1,6 +1,6 @@
 '''Modul'''
 from random_player import Random
-from Sequential import Sequential
+from sequential import Sequential
 from Action import Action
 from historian import Historian
 from most_common import MostCommon
@@ -44,56 +44,6 @@ class SingleGame:
         elif game == None:
             print("It is a tie. Player 1 and Player 2 both chose", self.action2)
             return None
-
-"""p1 = Historian(2)
-p2 = Random()
-p = SingleGame(p1, p2)
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")
-p.show_result()
-print("\n")"""
 
 
 

@@ -3,7 +3,7 @@ import matplotlib. pyplot as plt
 from single_game import SingleGame
 from random_player import Random
 from most_common import MostCommon
-from Sequential import Sequential
+from sequential import Sequential
 from historian import Historian
 
 class Tournament:
@@ -35,5 +35,5 @@ class Tournament:
 
 p = Historian(2)
 p2 = MostCommon()
-t = Tournament(p, p2, 150)
+t = Tournament(p, p2, 100)
 t.arrange_tournament()
