@@ -33,7 +33,7 @@ class Tournament:
         plt.plot(player_1_winpercentage)
         plt.show()
 
-p = Historian(2)
-p2 = MostCommon()
+p = Historian(1)
+p2 = Sequential()
 t = Tournament(p, p2, 100)
 t.arrange_tournament()

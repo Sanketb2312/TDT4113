@@ -1,17 +1,17 @@
 '''Module'''
 import random
 from player import Player
-from Action import Action
+from action import Action
 
 
 # geeksforgeeks
-def most_frequent(a):
+def most_frequent(freq_list):
     '''finds the most frquent element in a list'''
     counter = 0
-    num = a[0]
+    num = freq_list[0]
 
-    for i in a:
-        curr_frequency = a.count(i)
+    for i in freq_list:
+        curr_frequency = freq_list.count(i)
         if curr_frequency > counter:
             counter = curr_frequency
             num = i

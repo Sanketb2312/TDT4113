@@ -1,6 +1,6 @@
 '''Module'''
 from player import Player
-from Action import Action
+from action import Action
 import random
 
 class Random(Player):

@@ -1,7 +1,7 @@
 '''Modul'''
 import random
 from player import Player
-from Action import Action
+from action import Action
 
 # geeksforgeeks
 def most_frequent(list_freq):

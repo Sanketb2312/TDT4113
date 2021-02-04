@@ -1,7 +1,7 @@
 '''Modul'''
 from random_player import Random
 from sequential import Sequential
-from Action import Action
+from action import Action
 from historian import Historian
 from most_common import MostCommon
 class SingleGame:

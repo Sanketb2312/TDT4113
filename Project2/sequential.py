@@ -1,6 +1,6 @@
 '''Modul'''
 from player import Player
-from Action import Action
+from action import Action
 class Sequential(Player):
     '''Sequential class'''
 

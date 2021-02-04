@@ -1,4 +1,4 @@
-
+'''Modul'''
 class Action:
     '''Action class'''
     action_values = {"Rock": 0, "Sciccors": 1, "Paper": 2}
