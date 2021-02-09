@@ -22,3 +22,4 @@ class Action:
     def who_beats_me(self):
         '''method for counter attack'''
         return (self.value + 2) % 3
+    
