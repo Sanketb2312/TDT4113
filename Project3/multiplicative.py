@@ -33,5 +33,5 @@ class Multiplicative(Cipher):
         return valid_keys
 
 
-m = Multiplicative()
-print(Cipher.verify(m,"Tester 123",m.generate_keys()))
+#m = Multiplicative()
+#print(Cipher.verify(m,"Tester 123",m.generate_keys()))

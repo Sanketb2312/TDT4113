@@ -16,24 +16,25 @@ class Hacker(Receiver):
 
     def english_words(self):
         '''List of the txt file'''
-        return open('english_words.txt').readlines()
+        file = open('english_words.txt')
+        return file.read().splitlines()
 
     def brute_force(self, cipher, crypt_key):
         '''Brute force method'''
+        words = self.english_words()
         for key in cipher.possible_keys():
             if isinstance(cipher, Affine):
                 for key_two in cipher.possible_keys():
                     self.set_key([key, key_two])
-                    if self.operate_cipher(cipher, crypt_key) in self.english_words():
+                    if self.operate_cipher(cipher, crypt_key) in words:
                         return self.operate_cipher(cipher, crypt_key)
             else:
                 self.set_key(key)
-                if self.operate_cipher(cipher,crypt_key) in self.english_words():
+                if words.__contains__(self.operate_cipher(cipher, crypt_key)):
                     return self.operate_cipher(cipher,crypt_key)
 
         return "None of the possible keys could decrypt the encrypted word"
 
-c = Multiplicative()
+c = Caesar()
 h =Hacker(c)
-h.brute_force(c, c.encode(h.english_words()
-                          [random.randint(0, len(h.english_words()))], c.generate_keys()))
+print(h.brute_force(c, c.encode("hello", c.generate_keys())))

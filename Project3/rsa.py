@@ -22,7 +22,6 @@ class RSA(Cipher):
         decoded_blocks = []
         for val in self.c_list:
             decoded_blocks.append(pow(val, self.decryption_key[1], self.decryption_key[0]))
-        print(crypto_utils.text_from_blocks(decoded_blocks, 2))
         return crypto_utils.text_from_blocks(decoded_blocks, 2)
 
 
@@ -54,5 +53,5 @@ class RSA(Cipher):
             binary = '0'+binary
         return binary
 
-rsa = RSA()
-print(Cipher.verify(rsa, "Tester 123", rsa.generate_keys()))
+#rsa = RSA()
+#print(Cipher.verify(rsa, "Tester 123", rsa.generate_keys()))

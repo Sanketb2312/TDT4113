@@ -25,7 +25,7 @@ class Caesar(Cipher):
             possible_keys_list.append(val)
         return possible_keys_list
 
-c = Caesar()
-print(Cipher.verify(c, "Tester 123", c.generate_keys()))
+#c = Caesar()
+#print(Cipher.verify(c, "Tester 123", c.generate_keys()))
 
 
