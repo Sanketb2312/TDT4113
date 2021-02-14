@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0700c76c-7511-4a95-b5fe-7cd85e6094a0" name="Default Changelist" comment="Projct 3 finished" />
+    <list default="true" id="0700c76c-7511-4a95-b5fe-7cd85e6094a0" name="Default Changelist" comment="Projct 3 finished">
+      <change afterPath="$PROJECT_DIR$/../Project4/containor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project4/function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project4/operator_calc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project4/queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project4/stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project4/Containor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/calculator.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
